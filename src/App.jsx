@@ -1,3 +1,4 @@
 export default function App() {
-  return <div>Hello World!</div>
+    return <div className="text-blue">Hola mundo</div>
+        
 }
