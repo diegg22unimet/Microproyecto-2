@@ -1,5 +1,5 @@
 {
-  "name": "microproyecto-2",
+  "name": "micro2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.23.10",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react-swc": "^3.5.0",
