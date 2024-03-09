@@ -3,7 +3,7 @@ import videojuegos from '../videogames.json';
 
 function SignUpPage(){
     return (
-        <div>
+        <div className={styles.info}>
             <div className={styles.title}>
                 <h1>Registro de usuario</h1>
             </div>
@@ -12,8 +12,10 @@ function SignUpPage(){
                     <div className={styles.row}>
                         <label htmlFor="name">Nombre</label>
                         <br />
-                        <input type="text" value="Primer nombre"/>
-                        <input type="text" value="Primer apellido"/>
+                        <div className={styles.names}>
+                            <input type="text" value="Primer nombre"/>
+                            <input type="text" value="Primer apellido"/>
+                        </div>
                     </div>
                     <br />
                     <div className={styles.row}>
@@ -35,14 +37,17 @@ function SignUpPage(){
                     </div>
                     <br />
                     <div className={styles.row}>
-                        <label htmlFor="videogame">Videojuego favorito</label>
-                        <select name="" id="">
-                            {videojuegos.map((videojuego) => (
-                                <option key={videojuego.ID} value={videojuego.titulo}>
-                                {videojuego.titulo}
-                                </option>
-                            ))}
-                        </select>
+                        <div className={styles.videogames}>
+                            <label htmlFor="videogame" className={styles.videogame__label}>Videojuego favorito</label>
+                            <select name="" id="">
+                                {videojuegos.map((videojuego) => (
+                                    <option key={videojuego.ID} value={videojuego.titulo}>
+                                        {videojuego.titulo}
+                                    </option>
+                                    ))}
+                            </select>
+                        </div>
+                        
                     </div>
                 </form>
                 <br />
