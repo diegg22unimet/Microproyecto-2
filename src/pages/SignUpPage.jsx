@@ -1,7 +1,15 @@
+import{ signInWithPopup} from "firebase/auth";
+import {auth, googleProvider} from '../firebase'
 import styles from "./SignUpPage.module.css"
 import videojuegos from '../videogames.json';
 
 function SignUpPage(){
+
+    async function handleClick() {
+        const result = await signInWithPopup(auth,googleProvider);
+        console.log(result);
+    }
+
     return (
         <div>
             <div className={styles.navbar}>
@@ -62,6 +70,9 @@ function SignUpPage(){
                     <br />
                     <div className={styles.signup_button}>
                         <button type="button">Registrarse</button>
+                    </div>
+                    <div>
+                        <button onClick={handleClick} className={styles.btn__google}></button>
                     </div>
                 </div>
             </div>
