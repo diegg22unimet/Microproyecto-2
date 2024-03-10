@@ -8,9 +8,10 @@ function HomePage(){
         <div>
             <div className={styles.navbar}>
                 <nav>
-                    <a href="./home">Home</a>
-                    <a href="./login">Sign In</a>
-                    <a href="./signup">Sign Up</a>
+                    <div className={styles.pages}>
+                        <a href="./login">Sign In</a>
+                        <a href="./signup">Sign Up</a>
+                    </div>
                 </nav>
             </div>
             <div className={styles.clubsContainer}>
