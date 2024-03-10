@@ -11,6 +11,14 @@ function HomePage(){
                     <ul className={styles.pages}>
                         <li><a href="./login">Sign In</a></li>
                         <li><a href="./signup">Sign Up</a></li>
+                        <li>
+                            <div className={styles.search_bar}>
+                                <input type="text" placeholder="Buscar..." />
+                            </div>
+                        </li>
+                        <li>
+                            <button type="submit" className={styles.search_button}></button>
+                        </li>
                     </ul>
                 </nav>
             </header>

@@ -32,6 +32,48 @@
     color: blue;
 }
 
+.navbar .search_bar {
+    display: flex;
+    height: 15px;
+    width: 300px;
+    align-items: center;
+    text-decoration: none;
+}
+  
+.search_bar input[type="text"] {
+    flex: 1;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+}
+
+.search_bar input:hover {
+    background-color: aliceblue;
+}
+
+.pages li .search_button {
+    display: block;
+    padding: 15px 20px;
+
+}
+
+.search_button {
+    background-image: url(../../public/search-icon.png);
+    background-repeat:no-repeat;
+    background-size: 15px 15px;
+    background-position:center;
+    height: 40px;
+    width: 60px;
+    border: none;
+    margin: auto;
+    background-color: white;
+    cursor: pointer;
+}
+
+.search_button:hover {
+    background-color: aliceblue;
+}
+
 .container {
     width: 800px;
     background-color: white;

@@ -68,7 +68,7 @@ function SignUpPage(){
                     </form>
                     <br />
                     <br />
-                    <p>¿Ya tienes una cuenta? <a href="./login">Entra aquí</a></p>
+                    <p className={styles.parr}>¿Ya tienes una cuenta? <a href="./login">Entra aquí</a></p>
                     <br />
                     <div className={styles.signup_button}>
                         <button type="button">Registrarse</button>
