@@ -6,14 +6,14 @@ import ClubCard from './ClubCard';
 function HomePage(){
     return (
         <div>
-            <div className={styles.navbar}>
-                <nav>
-                    <div className={styles.pages}>
-                        <a href="./login">Sign In</a>
-                        <a href="./signup">Sign Up</a>
-                    </div>
+            <header>
+                <nav className={styles.navbar}>
+                    <ul className={styles.pages}>
+                        <li><a href="./login">Sign In</a></li>
+                        <li><a href="./signup">Sign Up</a></li>
+                    </ul>
                 </nav>
-            </div>
+            </header>
             <div className={styles.clubsContainer}>
                 {clubsData.map((club) => (
                     <ClubCard key={club.ID} club={club} />

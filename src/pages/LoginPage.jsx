@@ -21,14 +21,14 @@ function LoginPage(){
 
     return (
         <div>
-            <div className={styles.navbar}>
-                <nav>
-                    <div className={styles.pages}>
-                        <a href="./home">Home</a>
-                        <a href="./signup">Sign Up</a>
-                    </div>
+            <header>
+                <nav className={styles.navbar}>
+                    <ul className={styles.pages}>
+                        <li><a href="./home">Home</a></li>
+                        <li><a href="./signup">Sign Up</a></li>
+                    </ul>
                 </nav>
-            </div>
+            </header>
             <div className={styles.info}>
                 <div className={styles.title}>
                     <h1>Inicio de Sesión</h1>

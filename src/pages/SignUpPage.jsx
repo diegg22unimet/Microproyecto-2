@@ -12,14 +12,14 @@ function SignUpPage(){
 
     return (
         <div>
-            <div className={styles.navbar}>
-                <nav>
-                    <div className={styles.pages}>
-                        <a href="./home">Home</a>
-                        <a href="./login">Sign In</a>
-                    </div>
+            <header>
+                <nav className={styles.navbar}>
+                    <ul className={styles.pages}>
+                        <li><a href="./home">Home</a></li>
+                        <li><a href="./login">Sign In</a></li>
+                    </ul>
                 </nav>
-            </div>
+            </header>
             <div className={styles.info}>
                 <div className={styles.title}>
                     <h1>Registro de usuario</h1>
@@ -64,9 +64,11 @@ function SignUpPage(){
                                         ))}
                                 </select>
                             </div>
-                            
                         </div>
                     </form>
+                    <br />
+                    <br />
+                    <p>¿Ya tienes una cuenta? <a href="./login">Entra aquí</a></p>
                     <br />
                     <div className={styles.signup_button}>
                         <button type="button">Registrarse</button>
