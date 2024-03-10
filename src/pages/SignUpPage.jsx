@@ -22,27 +22,27 @@ function SignUpPage(){
                             <label htmlFor="name">Nombre</label>
                             <br />
                             <div className={styles.names}>
-                                <input type="text" value="Primer nombre"/>
-                                <input type="text" value="Primer apellido"/>
+                                <input type="text" placeholder="Primer nombre"/>
+                                <input type="text" placeholder="Primer apellido"/>
                             </div>
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="username">Nombre de usuario</label>
                             <br />
-                            <input type="text" />
+                            <input type="text" placeholder="Usuario" />
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="email">Correo electrónico</label>
                             <br />
-                            <input type="email" value="Email" />
+                            <input type="email" placeholder="Email" />
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="password">Contraseña</label>
                             <br />
-                            <input type="text" />
+                            <input type="text" placeholder="Contraseña" />
                         </div>
                         <br />
                         <div className={styles.row}>

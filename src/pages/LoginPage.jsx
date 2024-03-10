@@ -1,7 +1,61 @@
+import{ signInWithPopup} from "firebase/auth";
+import {auth, googleProvider} from '../firebase'
+import { useUser } from "../context/user";
+import { loginWithCredencials } from "../controllers/auth";
 import styles from "./LoginPage.module.css"
 
 function LoginPage(){
-    return <h1 className={styles.title}>Hello world!</h1>
+    const user = useUser();
+
+    async function handleClick() {
+        const result = await signInWithPopup(auth,googleProvider);
+        console.log(result);
+    }
+
+    const handleLogin = async () => {
+        const user = await loginWithCredencials(email,password)
+
+
+    }
+
+
+    return (
+        <div>
+            <div className={styles.navbar}>
+                <nav>
+                    <div className={styles.pages}>
+                        <a href="./home">Home</a>
+                        <a href="./signup">Sign Up</a>
+                    </div>
+                </nav>
+            </div>
+            <div className={styles.info}>
+                <div className={styles.title}>
+                    <h1>Inicio de Sesión</h1>
+                </div>
+                <div>
+                    <form action="">
+                        <div className={styles.row}>
+                            <label htmlFor="email">Correo electrónico</label>
+                            <br />
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <br />
+                        <div className={styles.row}>
+                            <label htmlFor="password">Contraseña</label>
+                            <br />
+                            <input type="password" placeholder="Contraseña"/>
+                        </div>
+                    </form>
+                    <div className={styles.button__row}>
+                        <button onClick={handleLogin}>  Iniciar Sesión  </button>
+                        <button onClick={handleClick} className={styles.btn__google}></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
 }
 
 export default LoginPage
