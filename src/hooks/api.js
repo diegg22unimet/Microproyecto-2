@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getClubs } from "../controllers/clubs";
 
 export function useClubs(){
-    const [data, setData] = useState(null)
+    const [data, setData] = useState(null);
 
     useEffect(() =>{
         async function cargarDatos(){
@@ -14,7 +14,7 @@ export function useClubs(){
 
         cargarDatos();
 
-    });
+    }, []);
 
     const isLoading = data === null;
     return{data,isLoading};
