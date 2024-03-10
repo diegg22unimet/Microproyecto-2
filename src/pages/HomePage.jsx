@@ -1,4 +1,7 @@
-import styles from "./HomePage.module.css"
+import React from 'react';
+import styles from './HomePage.module.css';
+import clubsData from '../clubs.json';
+import ClubCard from './ClubCard';
 
 function HomePage(){
     return (
@@ -11,9 +14,12 @@ function HomePage(){
                     </div>
                 </nav>
             </div>
-            
+            <div className={styles.clubsContainer}>
+                {clubsData.map((club) => (
+                    <ClubCard key={club.ID} club={club} />
+                ))}
+            </div>
         </div>
     )
 }
-
 export default HomePage

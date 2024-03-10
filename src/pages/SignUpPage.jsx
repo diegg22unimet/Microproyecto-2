@@ -53,7 +53,7 @@ function SignUpPage(){
                             <input type="text" placeholder="Contraseña" />
                         </div>
                         <br />
-                        <div className={styles.row}>
+                        <div>
                             <div className={styles.videogames}>
                                 <label htmlFor="videogame" className={styles.videogame__label}>Videojuego favorito</label>
                                 <select name="" id="">
