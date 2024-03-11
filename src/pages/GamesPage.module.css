@@ -25,3 +25,27 @@
     background-color: aliceblue;
     color: blue;
 }
+
+.gameContainer {
+    width: 800px;
+    background-color: white;
+    border-radius: 7px;
+    margin: auto;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.gameCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px 20px 40px;
+}
+
+h2 {
+    color: #232a33;
+    margin-top: 15px;
+}
+
+.gameContainer p:last-child {
+    margin-bottom: 15px;
+}

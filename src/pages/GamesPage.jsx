@@ -14,7 +14,11 @@ function GamesPage() {
                     </ul>
                 </nav>
             </header>
-            
+            <div className={styles.gamesContainer}>
+                {gamesData.map((game) => (
+                    <GameCard key={game.ID} game={game} />
+                ))}
+            </div>
         </div>
     )
 }
