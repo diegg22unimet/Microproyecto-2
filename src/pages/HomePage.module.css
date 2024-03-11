@@ -19,7 +19,7 @@
     display: inline-block;
 }
 
-.pages li a{
+.pages li .nav_links{
     display: block;
     padding: 15px 20px;
     text-decoration: none;
@@ -27,7 +27,7 @@
     font-weight: 500;
 }
 
-.pages li a:hover {
+.pages li .nav_links:hover {
     background-color: aliceblue;
     color: blue;
 }
@@ -62,13 +62,30 @@
 }
 
 .search_results li {
-    display: flex;
-    padding: 8px;
+    display: block;
     border-bottom: 1px solid #ccc;
 }
 
 .search_results li:last-child {
-    border-bottom: none; /* Eliminar borde inferior del último elemento */
+    border-bottom: none;
+}
+
+.search_results li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.search_results li:hover {
+    background-color: gainsboro;
+}
+
+.search_results li a:hover {
+    color: black;
+    font-weight: 500;
 }
 
 .title {

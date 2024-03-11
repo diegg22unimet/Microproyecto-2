@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './HomePage.module.css';
 import clubsData from '../clubs.json';
-import gamesData from '../videogames.json'
 import ClubCard from './ClubCard';
+import gamesData from '../videogames.json'
 
 function HomePage(){
     const [searchTerm, setSearchTerm] = useState('');
@@ -11,8 +11,7 @@ function HomePage(){
     const handleSearch = (event) => {
         const term = event.target.value;
         setSearchTerm(term);
-        
-        // Mostrar resultados solo si hay texto en el input
+
         if (term.trim() !== '') {
             setShowResults(true);
         } else {
@@ -29,8 +28,8 @@ function HomePage(){
             <header>
                 <nav className={styles.navbar}>
                     <ul className={styles.pages}>
-                        <li><a href="./login">Sign In</a></li>
-                        <li><a href="./signup">Sign Up</a></li>
+                        <li><a href="./login" className={styles.nav_links}>Sign In</a></li>
+                        <li><a href="./signup" className={styles.nav_links}>Sign Up</a></li>
                         <li>
                             <div className={styles.search_bar}>
                                 <input type="text" placeholder="Buscar..." value={searchTerm} onChange={handleSearch} />
@@ -38,7 +37,7 @@ function HomePage(){
                                 <div className={styles.search_results}>
                                     <ul>
                                         {filteredGames.map(game => (
-                                            <li key={game.ID}>{game.titulo}</li>
+                                            <li key={game.ID}><a href="./games" >{game.titulo}</a></li>
                                         ))}
                                     </ul>
                                 </div>
