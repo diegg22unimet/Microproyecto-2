@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './HomePage.module.css';
 import clubsData from '../clubs.json';
+import gamesData from '../videogames.json'
 import ClubCard from './ClubCard';
 
 function HomePage(){
+    const [searchTerm, setSearchTerm] = useState('');
+    const [showResults, setShowResults] = useState(false);
+
+    const handleSearch = (event) => {
+        const term = event.target.value;
+        setSearchTerm(term);
+        
+        // Mostrar resultados solo si hay texto en el input
+        if (term.trim() !== '') {
+            setShowResults(true);
+        } else {
+            setShowResults(false);
+        }
+    };
+
+    const filteredGames = gamesData.filter(game =>
+        game.titulo.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <div>
             <header>
@@ -13,15 +33,22 @@ function HomePage(){
                         <li><a href="./signup">Sign Up</a></li>
                         <li>
                             <div className={styles.search_bar}>
-                                <input type="text" placeholder="Buscar..." />
+                                <input type="text" placeholder="Buscar..." value={searchTerm} onChange={handleSearch} />
+                                {showResults && (
+                                <div className={styles.search_results}>
+                                    <ul>
+                                        {filteredGames.map(game => (
+                                            <li key={game.ID}>{game.titulo}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                )}
                             </div>
-                        </li>
-                        <li>
-                            <button type="submit" className={styles.search_button}></button>
                         </li>
                     </ul>
                 </nav>
             </header>
+            <h1 className={styles.title}>Lista de clubes</h1>
             <div className={styles.clubsContainer}>
                 {clubsData.map((club) => (
                     <ClubCard key={club.ID} club={club} />
