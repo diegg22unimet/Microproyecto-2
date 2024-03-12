@@ -11,7 +11,6 @@ export function useClubs(){
             setData(clubes);
         }
 
-
         cargarDatos();
 
     }, []);

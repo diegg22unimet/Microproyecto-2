@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.pages li {
+    display: inline-block;
+}
+
+.pages li .nav_links{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.pages li .nav_links:hover {
+    background-color: aliceblue;
+    color: blue;
+}
+
+.search_bar {
+    position: relative;
+}
+
+.search_bar input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search_results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search_results ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.search_results li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.search_results li:last-child {
+    border-bottom: none;
+}
+
+.search_results li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.search_results li:hover {
+    background-color: gainsboro;
+}
+
+.search_results li a:hover {
+    color: black;
+    font-weight: 500;
+}
+
+.title {
+    text-align: center;
+    color: #232a33;
+}
+
+.container {
+    width: 800px;
+    background-color: white;
+    border-radius: 7px;
+    margin: auto;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.clubCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px 20px 40px;
+}
+
+h2 {
+    color: #232a33;
+    margin-top: 15px;
+}
+
+h4 {
+    color: #475466;
+}
+
+ul {
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
+
+li::marker {
+    color: rgb(90, 129, 222);
+}

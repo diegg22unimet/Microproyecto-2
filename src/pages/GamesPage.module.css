@@ -1,0 +1,27 @@
+.navbar {
+    width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.pages li {
+    display: inline-block;
+}
+
+.pages li a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.pages li a:hover {
+    background-color: aliceblue;
+    color: blue;
+}

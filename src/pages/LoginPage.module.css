@@ -1,3 +1,51 @@
-.title {
-    font-size: small;
+.navbar {
+    width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.pages li {
+    display: inline-block;
+}
+
+.pages li a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.pages li a:hover {
+    background-color: aliceblue;
+    color: blue;
+}
+
+.info {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.btn__google{
+    background-image: url('../../public/google.webp');
+    background-repeat:no-repeat;
+    text-align: left;
+    height: 40px;
+    width: 60px;
+    background-size: 25px 25px;
+    background-position:center;
 }
