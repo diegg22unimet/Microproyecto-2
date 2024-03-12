@@ -14,6 +14,11 @@ function SignUpPage(){
     const [game, setGame] = useState('');
 
     const handleRegister = async () => {
+        if (!email || !password || !name || !lastName || !userName || !game) {
+            alert('Por favor, completa todos los campos antes de registrarte.');
+            return;
+        }
+
         try {
           const userCredential = await createUserWithEmailAndPassword(auth,email,password)
           console.log('Usuario registrado:', userCredential.user);
@@ -21,7 +26,6 @@ function SignUpPage(){
           console.error('Error al registrar usuario:', error);
         }
       };
-
 
     async function handleClick() {
         const result = await signInWithPopup(auth,googleProvider);
@@ -89,7 +93,7 @@ function SignUpPage(){
                     <p className={styles.parr}>¿Ya tienes una cuenta? <a href="./login">Entra aquí</a></p>
                     <br />
                     <div className={styles.signup_button}>
-                        <button onClick={handleRegister} type="button">Registrarse</button>
+                        <button onClick={handleRegister} type="button" className={styles.signup_button}><a href="./home">Registrarse</a></button>
                     </div>
                     <div>
                         <button onClick={handleClick} className={styles.btn__google}></button>

@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.pages li {
+    display: inline-block;
+}
+
+.pages li a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.pages li a:hover {
+    background-color: aliceblue;
+    color: blue;
+}
+
+.profileContainer{
+    margin: auto;
+    width: 320px;
+    height: 340px;
+    background: rgb(100,100,252);
+    background: linear-gradient(90deg, rgba(100,100,252,1) 17%, rgba(143,242,250,1) 91%);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.13);
+}
+
+.profileContainer .image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 10;
+    transform: translateY(50px);
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: absolute;
+    background: #fff;
+}
+
+.profileContainer .image img{
+    width: 120%;
+    height: 120%;
+    transform: translate(-8%,-8%);
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    transform: translateY(170px);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    align-items: center;
+    color: white;
+}
+
+.h2_name {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+      margin: 10px auto;
+    }
+  
+    .profileContainer {
+      height: 300px;
+    }
+  
+    .profileContainer .image {
+      width: 100px;
+      height: 100px;
+      transform: translateY(30px);
+      border-width: 5px;
+    }
+  
+    .profileContainer .image img {
+      width: 100%;
+      height: 100%;
+      transform: translate(-5%, -5%);
+    }
+  
+    .content {
+      transform: translateY(130px);
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+      max-width: 800px;
+    }
+  }
+  
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .navbar {
+      max-width: 1000px;
+    }
+  }

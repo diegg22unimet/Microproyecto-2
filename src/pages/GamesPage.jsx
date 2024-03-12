@@ -1,6 +1,6 @@
 import styles from './GamesPage.module.css'
 import gamesData from '../videogames.json'
-//import GameCard from './GameCard'
+import GameCard from './GameCard'
 
 function GamesPage() {
     return (
@@ -14,7 +14,11 @@ function GamesPage() {
                     </ul>
                 </nav>
             </header>
-            
+            <div className={styles.gamesContainer}>
+                {gamesData.map((game) => (
+                    <GameCard key={game.ID} game={game} />
+                ))}
+            </div>
         </div>
     )
 }

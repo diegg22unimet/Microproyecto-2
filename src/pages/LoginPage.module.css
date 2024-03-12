@@ -40,6 +40,11 @@
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
 }
 
+.button__row button a {
+    color: black;
+    text-decoration: none;
+}
+
 .btn__google{
     background-image: url('../../public/google.webp');
     background-repeat:no-repeat;
@@ -48,4 +53,22 @@
     width: 60px;
     background-size: 25px 25px;
     background-position:center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        margin: 15px auto;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .info {
+        width: 90%;
+        max-width: 500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    }
 }

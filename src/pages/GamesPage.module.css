@@ -25,3 +25,58 @@
     background-color: aliceblue;
     color: blue;
 }
+
+.gameContainer {
+    width: 800px;
+    background-color: white;
+    border-radius: 7px;
+    margin: auto;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+.gameCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px 20px 40px;
+}
+
+h2 {
+    color: #232a33;
+    margin-top: 15px;
+}
+
+.gameContainer p:last-child {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+      width: 100%;
+      margin: 10px auto;
+    }
+  
+    .gameContainer {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+      max-width: 800px;
+    }
+  
+    .gameContainer {
+      max-width: 600px;
+    }
+  }
+  
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .navbar {
+      max-width: 1000px;
+    }
+  
+    .gameContainer {
+      max-width: 800px;
+    }
+  }

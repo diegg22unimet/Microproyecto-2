@@ -6,6 +6,7 @@ import GamesPage from "./pages/GamesPage";
 //import PruebaParaMostrarDatos from "./pages/PruebaParaMostrarDatos";
 import ClubsPage from "./pages/ClubsPage";
 
+import ProfilePage from "./pages/ProfilePage"
 
 export const router = createBrowserRouter ([
     {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter ([
     {
         path:'/club',
         element: <ClubsPage/>,
+    },
+    {
+        path:'/profile',
+        element: <ProfilePage/>,
     }
 
     

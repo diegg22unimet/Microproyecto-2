@@ -40,13 +40,14 @@ function HomePage(){
                                 <div className={styles.search_results}>
                                     <ul>
                                         {filteredGames.map(game => (
-                                            <li key={game.ID}><a href="./games" >{game.titulo}</a></li>
+                                            <li key={game.ID}><a href={`./games#${game.ID}`}>{game.titulo}</a></li>
                                         ))}
                                     </ul>
                                 </div>
                                 )}
                             </div>
                         </li>
+                        <li><a href="./profile" className={styles.nav_links}>Profile</a></li>
                     </ul>
                 </nav>
             </header>
