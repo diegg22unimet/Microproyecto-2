@@ -1,22 +1,29 @@
-import{ signInWithPopup} from "firebase/auth";
+import{ signInWithPopup, signInWithEmailAndPassword} from "firebase/auth";
 import {auth, googleProvider} from '../firebase'
 import { useUser } from "../context/user";
 import { loginWithCredencials } from "../controllers/auth";
 import styles from "./LoginPage.module.css"
+import { useState } from 'react';
 
 function LoginPage(){
     const user = useUser();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const logear = async () => {
+        try {
+          const userCredential = await signInWithEmailAndPassword(email, password);
+          console.log('Usuario ha iniciado sesión:', userCredential.user);
+        } catch (error) {
+          console.error('Error al iniciar sesión:', error);
+        }
+      };
 
     async function handleClick() {
         const result = await signInWithPopup(auth,googleProvider);
-        console.log(result);
+        console.log("Se inicio sesion con google",result);
     }
 
-    const handleLogin = async () => {
-        const user = await loginWithCredencials(email,password)
-
-
-    }
 
 
     return (
@@ -38,17 +45,17 @@ function LoginPage(){
                         <div className={styles.row}>
                             <label htmlFor="email">Correo electrónico</label>
                             <br />
-                            <input type="email" placeholder="Email" />
+                            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="password">Contraseña</label>
                             <br />
-                            <input type="password" placeholder="Contraseña"/>
+                            <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                     </form>
                     <div className={styles.button__row}>
-                        <button onClick={handleLogin}>  Iniciar Sesión  </button>
+                        <button onClick={logear}>  Iniciar Sesión  </button>
                         <button onClick={handleClick} className={styles.btn__google}></button>
                     </div>
                 </div>
