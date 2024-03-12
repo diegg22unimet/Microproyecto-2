@@ -7,10 +7,5 @@ export const useAuth = () => {
     return context
 }
 
-export function AuthProvider({children}){
-    const user = {
-        login : true,
-    };
 
-    return <authContext.Provider value={{user}}>{children}</authContext.Provider>;
-}
+
