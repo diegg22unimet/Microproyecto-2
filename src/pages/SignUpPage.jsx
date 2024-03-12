@@ -33,7 +33,7 @@ function SignUpPage(){
                 <nav className={styles.navbar}>
                     <ul className={styles.pages}>
                         <li><a href="./home">Home</a></li>
-                        <li><a href="./login">Sign In</a></li>
+                        <li><a href="./">Sign In</a></li>
                     </ul>
                 </nav>
             </header>
