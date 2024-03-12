@@ -32,7 +32,7 @@ function HomePage(){
                 <nav className={styles.navbar}>
                     <ul className={styles.pages}>
                         <li><a href="./login" className={styles.nav_links}>Sign In</a></li>
-                        <li><a href="./signup" className={styles.nav_links}>Sign Up</a></li>
+                        <li><a href="./" className={styles.nav_links}>Sign Up</a></li>
                         <li>
                             <div className={styles.search_bar}>
                                 <input type="text" placeholder="Buscar..." value={searchTerm} onChange={handleSearch} />
