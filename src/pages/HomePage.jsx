@@ -4,6 +4,9 @@ import clubsData from '../clubs.json';
 import ClubCard from './ClubCard';
 import gamesData from '../videogames.json'
 
+
+
+
 function HomePage(){
     const [searchTerm, setSearchTerm] = useState('');
     const [showResults, setShowResults] = useState(false);

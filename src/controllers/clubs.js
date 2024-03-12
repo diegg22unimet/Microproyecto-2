@@ -1,4 +1,4 @@
-import { collection, doc, getDocs } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 
 export async function getClubs(){
@@ -6,8 +6,11 @@ export async function getClubs(){
     const clubsSnapshot = await getDocs(clubsCollection);
 
     const clubs = clubsSnapshot.docs.map((doc)=>doc.data());
-    //console.log(clubs);
+    console.log(clubs);
 
     return clubs;
 }
+
+
+
 

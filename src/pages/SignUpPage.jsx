@@ -1,13 +1,32 @@
-import{ signInWithPopup} from "firebase/auth";
+import{ signInWithPopup, createUserWithEmailAndPassword, getAuth} from "firebase/auth";
 import {auth, googleProvider} from '../firebase'
 import styles from "./SignUpPage.module.css"
 import videojuegos from '../videogames.json';
+import { useState } from 'react';
 
 function SignUpPage(){
+    const auth = getAuth();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [userName, setUserName] = useState('');
+    const [game, setGame] = useState('');
+
+    const handleRegister = async () => {
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth,email,password)
+          // Aquí puedes guardar otros datos del usuario en Firestore si es necesario
+          console.log('Usuario registrado:', userCredential.user);
+        } catch (error) {
+          console.error('Error al registrar usuario:', error);
+        }
+      };
+
 
     async function handleClick() {
         const result = await signInWithPopup(auth,googleProvider);
-        console.log(result);
+        console.log('Usuario registrado con Google:',result.user);
     }
 
     return (
@@ -30,27 +49,27 @@ function SignUpPage(){
                             <label htmlFor="name">Nombre</label>
                             <br />
                             <div className={styles.names}>
-                                <input type="text" placeholder="Primer nombre"/>
-                                <input type="text" placeholder="Primer apellido"/>
+                                <input type="text" placeholder="Primer nombre" value={name} onChange={(e) => setName(e.target.value)}/>
+                                <input type="text" placeholder="Primer apellido" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                             </div>
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="username">Nombre de usuario</label>
                             <br />
-                            <input type="text" placeholder="Usuario" />
+                            <input type="text" placeholder="Usuario" value={userName} onChange={(e) => setUserName(e.target.value)} />
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="email">Correo electrónico</label>
                             <br />
-                            <input type="email" placeholder="Email" />
+                            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <br />
                         <div className={styles.row}>
                             <label htmlFor="password">Contraseña</label>
                             <br />
-                            <input type="text" placeholder="Contraseña" />
+                            <input type="text" placeholder="Contraseña (Al menos 6 digitos)" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <br />
                         <div>
@@ -71,7 +90,7 @@ function SignUpPage(){
                     <p className={styles.parr}>¿Ya tienes una cuenta? <a href="./login">Entra aquí</a></p>
                     <br />
                     <div className={styles.signup_button}>
-                        <button type="button">Registrarse</button>
+                        <button onClick={handleRegister} type="button">Registrarse</button>
                     </div>
                     <div>
                         <button onClick={handleClick} className={styles.btn__google}></button>
