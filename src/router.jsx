@@ -6,7 +6,7 @@ import GamesPage from "./pages/GamesPage";
 //import PruebaParaMostrarDatos from "./pages/PruebaParaMostrarDatos";
 import ClubsPage from "./pages/ClubsPage";
 
-import ProfilePage from "./pages/ProfilePage"
+import ProfilePage from "./pages/ProfilePage";
 
 export const router = createBrowserRouter ([
     {
