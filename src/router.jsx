@@ -3,6 +3,7 @@ import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import SignUpPage from './pages/SignUpPage'
 import GamesPage from "./pages/GamesPage";
+import ProfilePage from "./pages/ProfilePage"
 
 export const router = createBrowserRouter ([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter ([
     {
         path:'/games',
         element: <GamesPage/>,
+    },
+    {
+        path:'/profile',
+        element: <ProfilePage/>,
     }
 
     
