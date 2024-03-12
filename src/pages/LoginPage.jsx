@@ -10,6 +10,11 @@ function LoginPage(){
     const [password, setPassword] = useState('');
 
     const logear = async () => {
+        if (!email || !password) {
+            alert('Por favor, completa todos los campos antes de iniciar sesión.');
+            return;
+        }
+        
         try {
           const userCredential = await signInWithEmailAndPassword(email, password);
           console.log('Usuario ha iniciado sesión:', userCredential.user);
