@@ -49,3 +49,34 @@ h2 {
 .gameContainer p:last-child {
     margin-bottom: 15px;
 }
+
+@media (max-width: 600px) {
+    .navbar {
+      width: 100%;
+      margin: 10px auto;
+    }
+  
+    .gameContainer {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+      max-width: 800px;
+    }
+  
+    .gameContainer {
+      max-width: 600px;
+    }
+  }
+  
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .navbar {
+      max-width: 1000px;
+    }
+  
+    .gameContainer {
+      max-width: 800px;
+    }
+  }

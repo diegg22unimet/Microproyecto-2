@@ -124,3 +124,39 @@ button {
     background-size: 25px 25px;
     background-position:center;
 }
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        max-width: none;
+        margin: 15px auto;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    .info {
+        width: 90%;
+        max-width: none;
+        height:auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .names {
+        gap: 10px;
+    }
+
+    input {
+        width: calc(50% - 20px);
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .videogames {
+        gap: 20px;
+    }
+
+}

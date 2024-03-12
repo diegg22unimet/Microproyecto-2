@@ -1,6 +1,6 @@
 import styles from './GamesPage.module.css'
 import gamesData from '../videogames.json'
-//import GameCard from './GameCard'
+import GameCard from './GameCard'
 
 function GamesPage() {
     return (
