@@ -1,7 +1,6 @@
 import{ signInWithPopup, signInWithEmailAndPassword} from "firebase/auth";
 import {auth, googleProvider} from '../firebase'
 import { useUser } from "../context/user";
-import { loginWithCredencials } from "../controllers/auth";
 import styles from "./LoginPage.module.css"
 import { useState } from 'react';
 

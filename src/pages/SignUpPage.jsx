@@ -16,7 +16,6 @@ function SignUpPage(){
     const handleRegister = async () => {
         try {
           const userCredential = await createUserWithEmailAndPassword(auth,email,password)
-          // Aquí puedes guardar otros datos del usuario en Firestore si es necesario
           console.log('Usuario registrado:', userCredential.user);
         } catch (error) {
           console.error('Error al registrar usuario:', error);
@@ -35,7 +34,7 @@ function SignUpPage(){
                 <nav className={styles.navbar}>
                     <ul className={styles.pages}>
                         <li><a href="./home">Home</a></li>
-                        <li><a href="./login">Sign In</a></li>
+                        <li><a href="./">Sign In</a></li>
                     </ul>
                 </nav>
             </header>
