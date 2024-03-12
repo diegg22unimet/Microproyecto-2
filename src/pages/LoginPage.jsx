@@ -11,6 +11,11 @@ function LoginPage(){
     const [password, setPassword] = useState('');
 
     const logear = async () => {
+        if (!email || !password) {
+            alert('Por favor, completa todos los campos antes de iniciar sesión.');
+            return;
+        }
+
         try {
           const userCredential = await signInWithEmailAndPassword(email, password);
           console.log('Usuario ha iniciado sesión:', userCredential.user);
@@ -54,7 +59,7 @@ function LoginPage(){
                         </div>
                     </form>
                     <div className={styles.button__row}>
-                        <button onClick={logear}>  Iniciar Sesión  </button>
+                        <button onClick={logear}>  <a href="./home">Iniciar Sesión</a>  </button>
                         <button onClick={handleClick} className={styles.btn__google}></button>
                     </div>
                 </div>

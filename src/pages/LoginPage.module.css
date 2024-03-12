@@ -40,6 +40,11 @@
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
 }
 
+.button__row button a {
+    color: black;
+    text-decoration: none;
+}
+
 .btn__google{
     background-image: url('../../public/google.webp');
     background-repeat:no-repeat;
