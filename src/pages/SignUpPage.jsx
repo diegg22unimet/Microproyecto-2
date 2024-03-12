@@ -14,11 +14,6 @@ function SignUpPage(){
     const [game, setGame] = useState('');
 
     const handleRegister = async () => {
-        if (!email || !password || !name || !lastName || !userName || !game) {
-            alert('Por favor, completa todos los campos antes de registrarte.');
-            return;
-        }
-
         try {
           const userCredential = await createUserWithEmailAndPassword(auth,email,password)
           console.log('Usuario registrado:', userCredential.user);
