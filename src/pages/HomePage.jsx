@@ -47,6 +47,7 @@ function HomePage(){
                                 )}
                             </div>
                         </li>
+                        <li><a href="./profile" className={styles.nav_links}>Profile</a></li>
                     </ul>
                 </nav>
             </header>

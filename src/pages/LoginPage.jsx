@@ -21,7 +21,7 @@ function LoginPage(){
 
     async function handleClick() {
         const result = await signInWithPopup(auth,googleProvider);
-        console.log("Se inicio sesion con google",result);
+        console.log("Se inicio sesion con Google",result);
     }
 
 

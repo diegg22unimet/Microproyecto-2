@@ -11,7 +11,17 @@ function ProfilePage() {
                     </ul>
                 </nav>
             </header>
-
+            <div className={styles.profileContainer}>
+                <div className={styles.image}>
+                    <img src="../../public/user.png" alt="" />
+                </div>
+                <div className={styles.content}>
+                    <h2 className={styles.h2_name}>Nombre Apellido</h2>
+                    <p>Nombre de usuario</p>
+                    <p>Correo electrónico</p>
+                    <p>Videojuego favorito</p>
+                </div>
+            </div>
         </div>
     )
 }
